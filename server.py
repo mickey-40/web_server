@@ -22,7 +22,7 @@ def write_to_file(data):
         file = database.write(f'\n{email}, {subject}, {message}')
 
 def write_to_csv(data):
-    with open('database.csv', mode='a') as database2:
+    with open('database.csv', mode='a', newline='') as database2:
         email = data["email"]
         subject = data["subject"]
         message = data["message"]
